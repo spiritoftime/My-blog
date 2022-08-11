@@ -34,7 +34,7 @@ def load_user(user_id):
 
 
 
-uri = os.environ.get("DB_URL")
+uri = os.environ.get("DATABASE_URL")
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
