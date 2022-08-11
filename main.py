@@ -12,7 +12,7 @@ import os
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('APP.KEY')
+app.config['SECRET_KEY'] = os.environ.get("APP_KEY")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 login_manager = LoginManager()
@@ -34,7 +34,7 @@ def load_user(user_id):
 
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DB_URL',"sqlite:///blog.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URL","sqlite:///blog.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
